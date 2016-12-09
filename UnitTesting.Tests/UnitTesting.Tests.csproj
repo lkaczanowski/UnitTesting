@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="1_TestStructure\ComponentTests.cs" />
+    <Compile Include="2_TestDouble\DocumentSignerMoqTests.cs" />
     <Compile Include="2_TestDouble\DocumentSignerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

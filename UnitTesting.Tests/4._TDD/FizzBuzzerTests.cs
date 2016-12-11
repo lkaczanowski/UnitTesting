@@ -23,5 +23,20 @@ namespace UnitTesting.Tests._4._TDD
       // assert
       Assert.AreEqual(expected, actual);
     }
+
+    [Test]
+    public void When_number_is_multiplier_of_5_then_return_Buzz()
+    {
+      // arrange
+      var expected = "Buzz";
+
+      _sut = new FizzBuzzer();
+
+      // act
+      var actual = _sut.FizzBuzz(10);
+
+      // assert
+      Assert.AreEqual(expected, actual);
+    }
   }
 }

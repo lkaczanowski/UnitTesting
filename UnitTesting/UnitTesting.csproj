@@ -45,6 +45,7 @@
     <Compile Include="2_TestDouble\DocumentSigner.cs" />
     <Compile Include="2_TestDouble\IDocumentRepository.cs" />
     <Compile Include="3_FsCheck\Calculator.cs" />
+    <Compile Include="4_TDD\FizzBuzzer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

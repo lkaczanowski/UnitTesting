@@ -10,7 +10,7 @@ namespace UnitTesting.Tests._4._TDD
     private FizzBuzzer _sut;
 
     [Test]
-    public void When_number_is_multiplier_of_3_then_return_Fizz()
+    public void When_number_is_multiplier_of_3_then_return_Fizz([Values(3, 6, 9, 12)] int number)
     {
       // arrange
       var expected = "Fizz";
@@ -18,14 +18,14 @@ namespace UnitTesting.Tests._4._TDD
       _sut = new FizzBuzzer();
 
       // act
-      var actual = _sut.FizzBuzz(6);
+      var actual = _sut.FizzBuzz(number);
 
       // assert
       Assert.AreEqual(expected, actual);
     }
 
     [Test]
-    public void When_number_is_multiplier_of_5_then_return_Buzz()
+    public void When_number_is_multiplier_of_5_then_return_Buzz([Values(5, 10, 20, 25)] int number)
     {
       // arrange
       var expected = "Buzz";
@@ -33,14 +33,14 @@ namespace UnitTesting.Tests._4._TDD
       _sut = new FizzBuzzer();
 
       // act
-      var actual = _sut.FizzBuzz(10);
+      var actual = _sut.FizzBuzz(number);
 
       // assert
       Assert.AreEqual(expected, actual);
     }
 
     [Test]
-    public void When_number_is_multiplier_of_3_and_5_then_return_FizzBuzz()
+    public void When_number_is_multiplier_of_3_and_5_then_return_FizzBuzz([Values(15, 30, 45)] int number)
     {
       // arrange
       var expected = "FizzBuzz";
@@ -48,22 +48,22 @@ namespace UnitTesting.Tests._4._TDD
       _sut = new FizzBuzzer();
 
       // act
-      var actual = _sut.FizzBuzz(30);
+      var actual = _sut.FizzBuzz(number);
 
       // assert
       Assert.AreEqual(expected, actual);
     }
 
-    [Test]
-    public void When_number_is_not_multiplier_of_3_or_5_then_return_number_as_string()
+    [TestCase(2, "2")]
+    [TestCase(4, "4")]
+    [TestCase(7, "7")]
+    public void When_number_is_not_multiplier_of_3_or_5_then_return_number_as_string(int number, string expected)
     {
       // arrange
-      var expected = "2";
-
       _sut = new FizzBuzzer();
 
       // act
-      var actual = _sut.FizzBuzz(2);
+      var actual = _sut.FizzBuzz(number);
 
       // assert
       Assert.AreEqual(expected, actual);

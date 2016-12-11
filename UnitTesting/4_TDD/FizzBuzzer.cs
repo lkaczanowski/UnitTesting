@@ -19,7 +19,7 @@
         return "Buzz";
       }
 
-      return string.Empty;
+      return number.ToString();
     }
   }
 }

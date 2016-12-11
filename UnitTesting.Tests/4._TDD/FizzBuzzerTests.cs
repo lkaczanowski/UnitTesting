@@ -53,5 +53,20 @@ namespace UnitTesting.Tests._4._TDD
       // assert
       Assert.AreEqual(expected, actual);
     }
+
+    [Test]
+    public void When_number_is_not_multiplier_of_3_or_5_then_return_number_as_string()
+    {
+      // arrange
+      var expected = "2";
+
+      _sut = new FizzBuzzer();
+
+      // act
+      var actual = _sut.FizzBuzz(2);
+
+      // assert
+      Assert.AreEqual(expected, actual);
+    }
   }
 }
